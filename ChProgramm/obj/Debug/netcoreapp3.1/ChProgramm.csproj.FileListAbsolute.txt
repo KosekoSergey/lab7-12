@@ -1,0 +1,13 @@
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\bin\Debug\netcoreapp3.1\ChProgramm.exe
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\bin\Debug\netcoreapp3.1\ChProgramm.deps.json
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\bin\Debug\netcoreapp3.1\ChProgramm.runtimeconfig.json
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\bin\Debug\netcoreapp3.1\ChProgramm.runtimeconfig.dev.json
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\bin\Debug\netcoreapp3.1\ChProgramm.dll
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\bin\Debug\netcoreapp3.1\ChProgramm.pdb
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\obj\Debug\netcoreapp3.1\ChProgramm.csproj.AssemblyReference.cache
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\obj\Debug\netcoreapp3.1\ChProgramm.AssemblyInfoInputs.cache
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\obj\Debug\netcoreapp3.1\ChProgramm.AssemblyInfo.cs
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\obj\Debug\netcoreapp3.1\ChProgramm.csproj.CoreCompileInputs.cache
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\obj\Debug\netcoreapp3.1\ChProgramm.dll
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\obj\Debug\netcoreapp3.1\ChProgramm.pdb
+C:\Users\zalman\source\repos\lab7-12\ChProgramm\obj\Debug\netcoreapp3.1\ChProgramm.genruntimeconfig.cache
