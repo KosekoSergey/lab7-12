@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.idea",
-    "\\ChProgramm",
-    "\\JavaProgramm"
+    "\\CppProgramm"
   ],
-  "SelectedNode": "\\ChProgramm\\Program.cs",
+  "SelectedNode": "\\CppProgramm\\CppProgramm.cpp",
   "PreviewInSolutionExplorer": false
 }
