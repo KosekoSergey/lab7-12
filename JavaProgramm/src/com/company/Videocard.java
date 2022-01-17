@@ -56,11 +56,50 @@ public class Videocard {
         System.out.println("Объем видеопамяти: " + memory);
     }
 
-    public void unput() {
+    public void input() {
         Scanner inp = new Scanner(System.in);
+        System.out.println("Введите название видеокарты: ");
+        name = inp.nextLine();
+        do
+        {
+            System.out.println("Введите частоту видеокарты: ");
+            try
+            {
+                rate = inp.nextInt();
+                if (rate <= 0)
+                {
+                    rate = -1;
+                    throw new Exception("Данное значение должно быть больше 0");
+                }
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.getMessage());
+            }
+        } while (rate == -1);
+
+        do
+        {
+            System.out.println("Введите объем видеопамяти: ");
+            try
+            {
+                memory = inp.nextInt();
+                if (memory <= 0)
+                {
+                    memory = -1;
+                    throw new Exception("Данное значение должно быть больше 0");
+                }
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.getMessage());
+            }
+        } while (memory == -1);
+
+        /*Scanner inp = new Scanner(System.in);
         name = inp.nextLine();
         rate = inp.nextInt();
-        memory = inp.nextInt();
+        memory = inp.nextInt();*/
         inp.close();
     }
 }

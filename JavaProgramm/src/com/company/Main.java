@@ -24,7 +24,7 @@ public class Main {
         Computer.SetCount(2);
         Computer.PrintCount();*/
 
-        Ram ram1 = new Ram();
+        /*Ram ram1 = new Ram();
         Ram ram2 = new Ram("ВК-1");
         Ram ram3 = new Ram("Видеокарта-1", 3200, 64);
         ram1.print();
@@ -35,6 +35,10 @@ public class Main {
         {
             rams[i] = new Ram("Видеокарата-" + i);
             rams[i].print();
-        }
+        }*/
+
+        Videocard vc = new Videocard();
+        vc.input();
+        vc.print();
     }
 }
