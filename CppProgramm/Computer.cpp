@@ -57,3 +57,17 @@ void emergency_turn_off(Computer comp) {
 	comp.state = 0;
 	cout << "Компьютер экстренно выключен";
 }
+
+int Computer::count = 0;
+
+void Computer::print_count() {  //вывод кол-ва компьютеров
+	cout << "Количество компьютеров: " << count << endl;
+}
+
+void Computer::set_count(int a) {  //установка кол-ва компьютеров
+	count = a;
+}
+
+int Computer::get_count() { //получение кол-ва компьютеров
+	return count;
+}

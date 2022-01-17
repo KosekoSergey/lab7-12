@@ -17,6 +17,7 @@ private:
 	Videocard videocard;  //видеокарта
 	Motherboard motherboard;  //материнская плата
 	int state = 0;  //состояние компбютера(0 - выключен)
+	static int count;
 public:
 	void init_computer(string name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard);  //создание компьютера
 	void turn_on();  //включить компьютер
@@ -28,5 +29,10 @@ public:
 	void set_videocard(Videocard videocard);  //ф-ция присвоения видеокарты
 	void set_processor(Processor processor);  //ф-ция присвоения процессора
 	friend void emergency_turn_off(Computer comp);  //пример дружественной функции
+	static void print_count();  //вывод кол-ва компьютеров
+	static void set_count(int a);  //установка кол-ва компьютеров
+	static int get_count();  //получение кол-ва компьютеров
 };
+
+
 

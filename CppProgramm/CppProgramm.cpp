@@ -14,7 +14,7 @@ int main() {
     SetConsoleOutputCP(866);
     setlocale(LC_ALL, "Rus");
 
-    Ram ram1;
+    /*Ram ram1;
     Videocard vc1;
     Motherboard mb1;
     Processor proc1;
@@ -26,7 +26,7 @@ int main() {
     comp[0].init_computer("Компьютер-1", proc1, ram1, vc1, mb1);  //создание 1 компьютера
     comp[0].turn_on();
     emergency_turn_off(comp[0]);
-    /*comp[0].turn_on();  //включение 1 компьютера
+    comp[0].turn_on();  //включение 1 компьютера
     comp[0].check();  //проверка 1 компьютера
     comp[1].turn_on();  //включение 2 компьютера
     comp[1].check();  //проверка 2 компьютера
@@ -34,7 +34,9 @@ int main() {
     ram1.set_rate(2200);  //изменение характеристик оперативной памяти 1
     comp[1].set_ram(ram1);  //присвоение оперативной памяти 1 компьютеру 2
     comp[0].check();  //проверка 1 компьютера
-    comp[1].check();  //проверка 2 компьютера */
-
+    comp[1].check();  //проверка 2 компьютера */          //работа 7
     
+    Computer::print_count();
+    Computer::set_count(2);
+    Computer::print_count();
 }
