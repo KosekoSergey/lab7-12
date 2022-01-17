@@ -5,7 +5,7 @@ using namespace std;
 
 #pragma once
 
-class motherboard {
+class Motherboard {
 private:
 	string name;  //название материнской платы
 	int rate = 0;  //чатсота

@@ -5,7 +5,7 @@ using namespace std;
 
 #pragma once
 
-class processor {
+class Processor {
 private:
 	string name;  //название процессора
 	int rate = 0;  //частота

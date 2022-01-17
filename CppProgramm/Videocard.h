@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class videocard {
+class Videocard {
 private:
 	string name;  //название видеокарты
 	int rate = 0; //частота

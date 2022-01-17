@@ -5,7 +5,7 @@ using namespace std;
 
 #pragma once
 
-class ram {
+class Ram {
 private:
 	string name;  //название оперативной пам€ти
 	int memory = 0;  // кол-во оперативной пам€ти
@@ -21,5 +21,22 @@ public:
 	void set_rate(int arate);  //частоты
 	void set_memory(int amemory);  //объема пам€ти
 	void input();  //¬вод с клавиатуры
+	Ram& operator + (Ram& ram)  //перегрузка оператора +
+	{
+		memory = memory + ram.memory;
+		return *this;
+	}
+	Ram operator ++()  //++x
+	{
+		memory++;
+		return *this;
+	}
+	Ram operator ++(int s)  //x++
+	{
+		Ram ram = *this;
+		memory++;
+		return ram;
+	}
 };
+
 
