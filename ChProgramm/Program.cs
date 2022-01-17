@@ -73,7 +73,6 @@ namespace Programm
 					vc1[i, j] = new Videocard("Видеокарта " + (i * 2 + j + 1), i * i + j + 1, i * j + 1);
 					vc1[i,j].Print();
 				}
-
 			}
 		}
 	}

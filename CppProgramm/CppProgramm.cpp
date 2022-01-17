@@ -53,8 +53,23 @@ int main() {
     ram2.print();
     ram3.print();*/              //работа 19
 
-    Videocard vc;
+    /*Videocard vc;
     vc.input();
-    vc.print();
+    vc.print();*/
 
+    Videocard vc[3];
+    for (int i = 0; i < 3; i++)
+    {
+        vc[i] = *new Videocard("Видеокарта " + to_string(i + 1), i + 1, i + 1);
+        vc[i].print();
+    }
+    Videocard vc1[2][2];
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            vc1[i][j] = *new Videocard("Видеокарта " + to_string(i * 2 + j + 1), i * i + j + 1, i * j + 1);
+            vc1[i][j].print();
+        }
+    }
 }
