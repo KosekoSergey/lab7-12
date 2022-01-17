@@ -2,6 +2,7 @@ package com.company;
 
 public class Computer {
 
+    static int count = 0; //кол-во компьютеров
     String name = "Без названия";  //название компьютера
     Processor processor = new Processor();  //процессор
     Ram ram = new Ram();  //оперативная память
@@ -9,7 +10,9 @@ public class Computer {
     Motherboard motherboard = new Motherboard();  //материнская плата
     int state = 0;  //состояние компбютера(0 - выключен)
 
-    public Computer() {}
+    public Computer() {
+        count = ++count;
+    }
 
     public Computer(String name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard) {  //конструктор
         this.name = name;
@@ -17,6 +20,7 @@ public class Computer {
         this.ram = ram;
         this.videocard = videocard;
         this.motherboard = motherboard;
+        count = ++count;
     }
 
     public void turnon() {  //включить компьютер
@@ -68,5 +72,18 @@ public class Computer {
 
     public void setProcessor(Processor processor) {  //метод присвоения процессора
         this.processor = processor;
+    }
+
+    public static void SetCount(int a)  //установка кол-ва компьютеров
+    {
+        count = a;
+    }
+    public static void PrintCount()  //вывод кол-ва компьютеров
+    {
+        System.out.println("Количество компьютеров: " + count);
+    }
+    public static int GetCount()  //получение кол-ва компьютеров
+    {
+        return count;
     }
 }
