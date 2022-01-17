@@ -69,12 +69,50 @@ namespace Programm
         {
             Console.WriteLine("Введите название видеокарты: ");
             Name = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Введите частоту видеокарты: ");                
+                try
+                {                    
+                    rate = Convert.ToInt32(Console.ReadLine());
+                    if (rate <= 0)
+                    {
+                        rate = -1;
+                        throw new Exception("Данное значение должно быть больше 0");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            } while (rate == -1);
+
+            do
+            {
+                Console.WriteLine("Введите объем видеопамяти: ");
+                try
+                {
+                    memory = Convert.ToInt32(Console.ReadLine());
+                    if (memory <= 0)
+                    {
+                        memory = -1;
+                        throw new Exception("Данное значение должно быть больше 0");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            } while (memory == -1);
+
+            /*Console.WriteLine("Введите название видеокарты: ");
+            Name = Console.ReadLine();
             Console.WriteLine("Введите частоту видеокарты и объем видеопамяти: ");
             string[] s1;
             string s = Console.ReadLine();
             s1 = s.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
             Rate = Convert.ToInt32(s1[0]);
-            Memory = Convert.ToInt32(s1[1]);
+            Memory = Convert.ToInt32(s1[1]);*/
         }
     }
 }

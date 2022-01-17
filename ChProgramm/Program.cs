@@ -21,7 +21,7 @@ namespace Programm
 			ram1.Rate = 2200;
 			comps[1].Ram = ram1;
 			comps[0].Check();
-			comps[1].Check();*/
+			comps[1].Check();*/                          //работа 6
 
 			/*Motherboard[] mb = new Motherboard[2];
 			mb[0] = new Motherboard("Материнская плата-1", 1200, 8);
@@ -41,7 +41,7 @@ namespace Programm
 			Computer.SetCount(2);
 			Computer.PrintCount();*/                //работа 8
 
-			Ram ram1 = new Ram();
+			/*Ram ram1 = new Ram();
 			Ram ram2 = new Ram("ВК-1");
 			Ram ram3 = new Ram("Видеокарта-1", 3200, 64);
 			ram1.Print();
@@ -52,7 +52,12 @@ namespace Programm
             {
 				rams[i] = new Ram("Видеокарата-" + i);
 				rams[i].Print();
-            }
+            }*/                                    //работа 9
+
+		
+			Videocard vc = new Videocard();
+			vc.Input();
+			vc.Print();
 		}
 	}
 }
