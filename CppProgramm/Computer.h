@@ -19,7 +19,9 @@ private:
 	int state = 0;  //состо€ние компбютера(0 - выключен)
 	static int count;
 public:
-	void init_computer(string name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard);  //создание компьютера
+	Computer();  //конструктор без параметров
+	Computer(string name);  //конструктор с одним параметром
+	Computer(string name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard);  //конструктор со всеми пол€ми
 	void turn_on();  //включить компьютер
 	void turn_off();  //выключить компьютер
 	void check();  //проверить и вывести состовл€ющие компьютера на экран

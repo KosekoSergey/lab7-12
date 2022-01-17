@@ -11,7 +11,9 @@ private:
 	int memory = 0;  // кол-во оперативной памяти
 	int rate = 0;  //частота
 public:
-	void init(string aname, int arate, int amemory);  //создание оперативной памяти
+	Ram();  //конструктор без параметров
+	Ram(string name);  //конструктор с одним параметром
+	Ram(string name, int rate, int memory);  //конструктор со всеми полями
 	int check();  //проверка
 	void print(); //вывод на экран характеристик
 	string get_name();  //ф-ция получения названия
@@ -37,6 +39,11 @@ public:
 		memory++;
 		return ram;
 	}
+	Ram operator =(const Ram& temp) {  //оператор присваивания
+		copy(temp);
+		return *this;
+	}
+	void copy(const Ram& temp);  //функция копирования
 };
 
 

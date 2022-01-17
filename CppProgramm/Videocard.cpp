@@ -1,6 +1,12 @@
 #include "Videocard.h"
 
-void Videocard::init(string aname, int arate, int amemory) {  //создание видеокарты
+Videocard::Videocard() {}  //конструктор без параметров
+
+Videocard::Videocard(string name) {  //конструктор с одним параметром
+	this->name = name;
+}
+
+Videocard::Videocard(string aname, int arate, int amemory) {  //конструктор со всеми полями
 	name = aname;
 	rate = arate;
 	memory = amemory;

@@ -1,6 +1,12 @@
 #include "Processor.h"
 
-void Processor::init(string aname, int arate, int abitness) {  //создание процессора
+Processor::Processor() {}  //конструктор без параметров
+
+Processor::Processor(string name) {  //конструктор с одним параметром
+	this->name = name;
+}
+
+Processor::Processor(string aname, int arate, int abitness) {  //конструктор со всеми полями
 	name = aname;
 	bitness = abitness;
 	rate = arate;

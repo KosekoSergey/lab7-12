@@ -1,6 +1,12 @@
 #include "Motherboard.h"
 
-void Motherboard::init(string aname, int arate, int aslots) {  //создание материнской платы
+Motherboard::Motherboard() {}  //конструктор без параметров
+
+Motherboard::Motherboard(string name) {  //конструктор с одним параметром
+	this->name = name;
+}
+
+Motherboard::Motherboard(string aname, int arate, int aslots) {  //конструктор со всеми полями
 	name = aname;
 	num_of_slots = aslots;
 	rate = arate;

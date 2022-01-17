@@ -1,6 +1,12 @@
 #include "Computer.h"
 
-void Computer::init_computer(string name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard) {  //создание компьютера
+Computer::Computer() {}  //конструктор без параметров
+
+Computer::Computer(string name) {  //конструктор с одним параметром
+	this->name = name;
+}
+
+Computer::Computer(string name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard) {  //конструктор со всеми полями
 	this->name = name;
 	this->processor = processor;
 	this->ram = ram;

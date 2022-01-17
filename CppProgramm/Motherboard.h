@@ -11,7 +11,9 @@ private:
 	int rate = 0;  //чатсота
 	int num_of_slots = 0;  //кол-во разъемов
 public:
-	void init(string aname, int arate, int aslots);  //создание материнской платы
+	Motherboard();  //конструктор без параметров
+	Motherboard(string name);  //конструктор с одним параметром
+	Motherboard(string aname, int arate, int aslots);  //конструктор со всеми полями
 	int check();  //проверка
 	void print();  //вывод на экран характеристик
 	string get_name();  //ф-ция получения названия

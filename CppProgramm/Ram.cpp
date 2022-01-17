@@ -1,9 +1,15 @@
 #include "Ram.h"
 
-void Ram::init(string aname, int arate, int amemory) {  //создание оперативной памяти
-	name = aname;
-	rate = arate;
-	memory = amemory;
+Ram::Ram() {}  //конструктор без параметров
+
+Ram::Ram(string name) {  //конструктор с одним параметром
+	this->name = name;
+}
+
+Ram::Ram(string name, int rate, int memory) {  //конструктор со всеми полями
+	this->name = name;
+	this->rate = rate;
+	this->memory = memory;
 }
 
 int Ram::check() {  //проверка
@@ -45,4 +51,10 @@ void Ram::input() {  //Ввод с клавиатуры
 	cin >> name;
 	cin >> memory;
 	cin >> rate;
+}
+
+void Ram::copy(const Ram& temp) {  //функция копирования
+	name = temp.name;
+	rate = temp.rate;
+	memory = temp.memory;
 }

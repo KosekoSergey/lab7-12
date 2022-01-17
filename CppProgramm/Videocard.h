@@ -10,7 +10,9 @@ private:
 	int rate = 0; //частота
 	int memory = 0;  //объем видеопамяти
 public:
-	void init(string aname, int arate, int amemory);  //создание видеокарты
+	Videocard();  //конструктор без параметров
+	Videocard(string name);  //конструктор с одним параметром
+	Videocard(string aname, int arate, int amemory);  //конструктор со всеми полями
 	int check();  //проверка видеокарты
 	void print();  //вывод на экран характеристик
 	string get_name();  //ф-ция получения названия видеокарты

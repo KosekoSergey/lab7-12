@@ -36,7 +36,20 @@ int main() {
     comp[0].check();  //проверка 1 компьютера
     comp[1].check();  //проверка 2 компьютера */          //работа 7
     
-    Computer::print_count();
+    /*Computer::print_count();
     Computer::set_count(2);
-    Computer::print_count();
+    Computer::print_count();*/         //работа 8
+
+    Ram ram1;
+    Ram ram2("ОП-1");
+    Ram ram3("Оперативная память-1", 1600, 8);
+    ram1.print();
+    ram2.print();
+    ram3.print();
+    ram1 = ram3;
+    ram2.copy(ram3);
+    ram3.set_memory(10);
+    ram1.print();
+    ram2.print();
+    ram3.print();
 }

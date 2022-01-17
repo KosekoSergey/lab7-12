@@ -11,7 +11,9 @@ private:
 	int rate = 0;  //частота
 	int bitness = 0;  //разрядность процессора
 public:
-	void init(string aname, int arate, int abitness);  //создание процессора
+	Processor();  //конструктор без параметров
+	Processor(string name);  //конструктор с одним параметром
+	Processor(string aname, int arate, int abitness);  //конструктор со всеми полями
 	int check();  //проверка
 	void print();  //вывод на экран характеристик
 	string get_name();  //ф-ция получения названия
