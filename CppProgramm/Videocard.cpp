@@ -48,7 +48,34 @@ void Videocard::set_memory(int amemory) {    //объема видеопамяти
 }
 
 void Videocard::input() {  //Ввод с клавиатуры
+	cout << "Введите название видеокарты: ";
 	cin >> name;
-	cin >> rate;
-	cin >> memory;
+	do {		
+		try {
+			cout << "Введите частоту видеокарты: ";
+			cin >> rate;
+			if (rate <= 0)
+			{
+				rate = -1;
+				throw "Данное значение должно быть больше 0\n";
+			}
+		}
+		catch (const char* e) {
+			cerr << "Error" << e;
+		}
+	} while (rate == -1);
+	do {
+		try {
+			cout << "Введите объем видеопамяти: ";
+			cin >> memory;
+			if (memory <= 0)
+			{
+				memory = -1;
+				throw "Данное значение должно быть больше 0\n";
+			}
+		}
+		catch (const char* e) {
+			cerr << "Error" << e;
+		}
+	} while (memory == -1);
 }

@@ -40,7 +40,7 @@ int main() {
     Computer::set_count(2);
     Computer::print_count();*/         //работа 8
 
-    Ram ram1;
+    /*Ram ram1;
     Ram ram2("ОП-1");
     Ram ram3("Оперативная память-1", 1600, 8);
     ram1.print();
@@ -51,5 +51,10 @@ int main() {
     ram3.set_memory(10);
     ram1.print();
     ram2.print();
-    ram3.print();
+    ram3.print();*/              //работа 19
+
+    Videocard vc;
+    vc.input();
+    vc.print();
+
 }
