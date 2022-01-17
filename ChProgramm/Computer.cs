@@ -6,6 +6,7 @@ namespace Programm
 {
     class Computer
     {
+        private static int count = 0;  //количество компьютеров
         private string name = "Без названия";  //название компьютера
         public string Name
         {
@@ -66,7 +67,10 @@ namespace Programm
                 }
             }
         }
-        public Computer() { }
+        public Computer()  
+        {
+            count = ++count;  //конструктор теперь увеличивает количество компьютеров
+        }
         public Computer(string name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard)  //конструктор
         {
             this.name = name;
@@ -74,6 +78,11 @@ namespace Programm
             this.ram = ram;
             this.videocard = videocard;
             this.motherboard = motherboard;
+            count = ++count;  //конструктор теперь увеличивает количество компьютеров
+        }
+        ~Computer()
+        {
+            count = --count;
         }
         public void TurnOn()
         {  //включить компьютер
@@ -108,6 +117,18 @@ namespace Programm
                 else Console.WriteLine("Видеокарта отсутствует");
                 Console.WriteLine();
             }
+        }
+        public static void SetCount(int a)  //установка кол-ва компьютеров
+        {
+            count = a;
+        }
+        public static void PrintCount()  //вывод кол-ва компьютеров
+        {
+            Console.WriteLine("Количество компьютеров: " + count);
+        }
+        public static int GetCount()  //получение кол-ва компьютеров
+        {
+            return count;
         }
     }
 }

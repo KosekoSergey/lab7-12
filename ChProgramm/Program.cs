@@ -34,7 +34,12 @@ namespace Programm
 			Ram ram3 = ram1 + ram2;
 			ram3.Print();
 			Ram ram4 = ram3++;
-			ram4.Print();*/
+			ram4.Print();*/                          //работа 7
+
+			Computer comp1 = new Computer();
+			Computer.PrintCount();
+			Computer.SetCount(2);
+			Computer.PrintCount();
 		}
 	}
 }
