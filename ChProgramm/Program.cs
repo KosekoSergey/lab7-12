@@ -54,10 +54,27 @@ namespace Programm
 				rams[i].Print();
             }*/                                    //работа 9
 
-		
-			Videocard vc = new Videocard();
+
+			/*Videocard vc = new Videocard();
 			vc.Input();
-			vc.Print();
+			vc.Print();*/
+
+			Videocard[] vc = new Videocard[3];
+			for (int i = 0; i<3; i++)
+            {
+				vc[i] = new Videocard("Видеокарта " + (i + 1), i + 1, i + 1);
+				vc[i].Print();
+            }
+			Videocard[,] vc1 = new Videocard[2, 2];
+			for (int i = 0; i < 2; i++)
+            {
+				for (int j = 0; j < 2; j++)
+                {
+					vc1[i, j] = new Videocard("Видеокарта " + (i * 2 + j + 1), i * i + j + 1, i * j + 1);
+					vc1[i,j].Print();
+				}
+
+			}
 		}
 	}
 }
