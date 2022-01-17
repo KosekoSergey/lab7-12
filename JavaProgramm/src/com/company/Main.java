@@ -18,5 +18,6 @@ public class Main {
         comps[1].setRam(ram1);
         comps[0].check();
         comps[1].check();
+
     }
 }
