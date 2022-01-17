@@ -72,5 +72,13 @@ namespace Programm
             Rate = Convert.ToInt32(s1[0]);
             Memory = Convert.ToInt32(s1[1]);
         }
+        public static Ram operator +(Ram ram1, Ram ram2)
+        {
+            return new Ram { Rate = ram1.Rate + ram2.Rate, Memory = ram1.Memory + ram2.Memory };
+        }
+        public static Ram operator ++(Ram ram)
+        {
+            return new Ram { Rate = ram.Rate++, Memory = ram.Memory++ };
+        }
     }
 }

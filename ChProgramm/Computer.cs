@@ -69,11 +69,11 @@ namespace Programm
         public Computer() { }
         public Computer(string name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard)  //конструктор
         {
-            Name = name;
-            Processor = processor;
-            Ram = ram;
-            Videocard = videocard;
-            Motherboard = motherboard;
+            this.name = name;
+            this.processor = processor;
+            this.ram = ram;
+            this.videocard = videocard;
+            this.motherboard = motherboard;
         }
         public void TurnOn()
         {  //включить компьютер
