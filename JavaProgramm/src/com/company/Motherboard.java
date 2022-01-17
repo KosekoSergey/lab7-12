@@ -8,9 +8,14 @@ public class Motherboard {
     int rate; //частота
     int numOfSlots;  //кол-во разъемов
 
-    public Motherboard() {}
+    public Motherboard() {}  //конструктор без параметров
 
-    public Motherboard(String myName, int myRate, int myNumOfSlots) {  //конструктор
+    public Motherboard(String name)  //конструктор с одним параметром
+    {
+        this.name = name;
+    }
+
+    public Motherboard(String myName, int myRate, int myNumOfSlots) {  //конструктор со всеми параметрами
         name = myName;
         rate = myRate;
         numOfSlots = myNumOfSlots;

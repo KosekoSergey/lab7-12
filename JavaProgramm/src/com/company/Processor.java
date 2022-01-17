@@ -8,9 +8,14 @@ public class Processor {
     int rate; //частота
     int bitness;  //разрядность процессора
 
-    public Processor() {}
+    public Processor() {}  //конструктор без параметров
 
-    public Processor(String myName, int myRate, int myBitness) {  //конструктор
+    public Processor(String name)  //конструктор с одним параметром
+    {
+        this.name = name;
+    }
+
+    public Processor(String myName, int myRate, int myBitness) {  //конструктор со всеми параметрами
         name = myName;
         rate = myRate;
         bitness = myBitness;

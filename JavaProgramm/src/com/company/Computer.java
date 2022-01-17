@@ -10,17 +10,19 @@ public class Computer {
     Motherboard motherboard = new Motherboard();  //материнская плата
     int state = 0;  //состояние компбютера(0 - выключен)
 
-    public Computer() {
-        count = ++count;
+    public Computer() {}  //конструктор без параметров
+
+    public Computer(String name)  //конструктор с одним параметром
+    {
+        this.name = name;
     }
 
-    public Computer(String name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard) {  //конструктор
+    public Computer(String name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard) {  //конструктор со всеми параметрами
         this.name = name;
         this.processor = processor;
         this.ram = ram;
         this.videocard = videocard;
         this.motherboard = motherboard;
-        count = ++count;
     }
 
     public void turnon() {  //включить компьютер

@@ -8,9 +8,14 @@ public class Videocard {
     int rate; //частота
     int memory;  //объем видеопамяти
 
-    public Videocard() {}
+    public Videocard() {}  //конструктор без параметров
 
-    public Videocard(String myName, int myRate, int myMemory) {  //конструктор
+    public Videocard(String name)  //конструктор с одним параметром
+    {
+        this.name = name;
+    }
+
+    public Videocard(String myName, int myRate, int myMemory) {  //конструктор со всеми параметрами
         name = myName;
         rate = myRate;
         memory = myMemory;

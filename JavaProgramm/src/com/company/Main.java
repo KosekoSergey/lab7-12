@@ -19,9 +19,22 @@ public class Main {
         comps[0].check();
         comps[1].check();*/
 
-        Computer comp = new Computer();
+        /*Computer comp = new Computer();
         Computer.PrintCount();
         Computer.SetCount(2);
-        Computer.PrintCount();
+        Computer.PrintCount();*/
+
+        Ram ram1 = new Ram();
+        Ram ram2 = new Ram("ВК-1");
+        Ram ram3 = new Ram("Видеокарта-1", 3200, 64);
+        ram1.print();
+        ram2.print();
+        ram3.print();
+        Ram[] rams = new Ram[3];
+        for (int i = 0; i < 3; i++)
+        {
+            rams[i] = new Ram("Видеокарата-" + i);
+            rams[i].print();
+        }
     }
 }

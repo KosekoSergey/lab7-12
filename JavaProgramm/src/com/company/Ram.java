@@ -8,9 +8,14 @@ public class Ram {
     int rate; //частота
     int memory;  //объем памяти
 
-    public Ram() {}
+    public Ram() {}  //конструктор без параметров
 
-    public Ram(String myName, int myRate, int myMemory) {  //конструктор
+    public Ram(String name)  //конструктор с одним параметром
+    {
+        this.name = name;
+    }
+
+    public Ram(String myName, int myRate, int myMemory) {  //конструктор со всеми параметрами
         name = myName;
         rate = myRate;
         memory = myMemory;
