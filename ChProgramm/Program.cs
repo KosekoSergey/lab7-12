@@ -36,10 +36,23 @@ namespace Programm
 			Ram ram4 = ram3++;
 			ram4.Print();*/                          //работа 7
 
-			Computer comp1 = new Computer();
+			/*Computer comp1 = new Computer();
 			Computer.PrintCount();
 			Computer.SetCount(2);
-			Computer.PrintCount();
+			Computer.PrintCount();*/                //работа 8
+
+			Ram ram1 = new Ram();
+			Ram ram2 = new Ram("ВК-1");
+			Ram ram3 = new Ram("Видеокарта-1", 3200, 64);
+			ram1.Print();
+			ram2.Print();
+			ram3.Print();
+			Ram[] rams = new Ram[3];
+			for (int i = 0; i < 3; i++)
+            {
+				rams[i] = new Ram("Видеокарата-" + i);
+				rams[i].Print();
+            }
 		}
 	}
 }

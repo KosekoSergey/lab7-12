@@ -43,8 +43,12 @@ namespace Programm
             }
         }
 
-        public Motherboard() { }
-        public Motherboard(string name, int rate, int numOfSlots)  //конструктор
+        public Motherboard() { }  //конструктор без параметров
+        public Motherboard(string name)  //конструктор с одним параметром
+        {
+            Name = name;
+        }
+        public Motherboard(string name, int rate, int numOfSlots)  //конструктор со всеми параметрами
         {
             Name = name;
             Rate = rate;

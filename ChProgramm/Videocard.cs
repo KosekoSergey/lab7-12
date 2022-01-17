@@ -43,8 +43,12 @@ namespace Programm
             }
         }
 
-        public Videocard() { }
-        public Videocard(string name, int rate, int memory)  //конструктор
+        public Videocard() { }  //конструктор без параметров
+        public Videocard(string name)  //конструктор с одним параметром
+        {
+            Name = name;
+        }
+        public Videocard(string name, int rate, int memory)  //конструктор со всеми параметрами
         {
             Name = name;
             Rate = rate;

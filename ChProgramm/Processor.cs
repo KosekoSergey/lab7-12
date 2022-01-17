@@ -43,8 +43,12 @@ namespace Programm
             }
         }
 
-        public Processor() { }
-        public Processor(string name, int rate, int bitness)  //конструктор
+        public Processor() { }  //конструктор без параметров
+        public Processor(string name)  //конструктор с одним параметром
+        {
+            Name = name;
+        }
+        public Processor(string name, int rate, int bitness)  //конструктор со всеми параметрами
         {
             Name = name;
             Rate = rate;

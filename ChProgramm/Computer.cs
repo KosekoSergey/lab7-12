@@ -67,22 +67,18 @@ namespace Programm
                 }
             }
         }
-        public Computer()  
+        public Computer() { }  //конструктор без параметров
+        public Computer(string name)  //конструктор с одним параметром
         {
-            count = ++count;  //конструктор теперь увеличивает количество компьютеров
+            Name = name;
         }
-        public Computer(string name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard)  //конструктор
+        public Computer(string name, Processor processor, Ram ram, Videocard videocard, Motherboard motherboard)  //конструктор со всеми параметрами
         {
             this.name = name;
             this.processor = processor;
             this.ram = ram;
             this.videocard = videocard;
             this.motherboard = motherboard;
-            count = ++count;  //конструктор теперь увеличивает количество компьютеров
-        }
-        ~Computer()
-        {
-            count = --count;
         }
         public void TurnOn()
         {  //включить компьютер

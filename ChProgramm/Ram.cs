@@ -43,8 +43,12 @@ namespace Programm
             }
         }
 
-        public Ram() { }
-        public Ram(string name, int rate, int memory)  //конструктор
+        public Ram() { }  //конструктор без параметров
+        public Ram(string name)  //конструктор с одним параметром
+        {
+            Name = name;
+        }
+        public Ram(string name, int rate, int memory)  //конструктор со всеми параметрами
         {
             Name = name;
             Rate = rate;
