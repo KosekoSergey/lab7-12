@@ -41,7 +41,7 @@ public class Main {
         vc.input();
         vc.print();*/
 
-        Videocard[] vc = new Videocard[3];
+        /*Videocard[] vc = new Videocard[3];
         for (int i = 0; i<3; i++)
         {
             vc[i] = new Videocard("Видеокарта " + (i + 1), i + 1, i + 1);
@@ -55,6 +55,10 @@ public class Main {
                 vc1[i][j] = new Videocard("Видеокарта " + (i * 2 + j + 1), i * i + j + 1, i * j + 1);
                 vc1[i][j].print();
             }
-        }
+        }*/
+
+        Ram ram = new Ram("Видеокарта-1", 3200, 64);
+        ram.print();
+
     }
 }

@@ -2,11 +2,20 @@ package com.company;
 
 import java.util.*;
 
-public class Videocard {
+interface ICloneable
+{
+    public Object Clone() throws CloneNotSupportedException;
+}
+
+public class Videocard implements ICloneable {
 
     String name;  //название видеокарты
     int rate; //частота
     int memory;  //объем видеопамяти
+
+    public Videocard Clone() throws CloneNotSupportedException {
+        return (Videocard) super.clone();
+    }
 
     public Videocard() {}  //конструктор без параметров
 

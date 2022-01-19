@@ -2,9 +2,19 @@ package com.company;
 
 import java.util.*;
 
-public class Processor {
+abstract class Pdevice
+{
+    protected String name;
+    public String getName() {  //метод получения названия процессора
+        return name;
+    }
+    public void setName(String name) {  //метод присвоения названия процессора
+        this.name = name;
+    }
+}
 
-    String name;  //название процессора
+public class Processor extends Pdevice{
+
     int rate; //частота
     int bitness;  //разрядность процессора
 
@@ -21,20 +31,12 @@ public class Processor {
         bitness = myBitness;
     }
 
-    public String getName() {  //метод получения названия процессора
-        return name;
-    }
-
     public int getRate() {  //частоты
         return rate;
     }
 
     public int getBitness() {  //разрядности
         return bitness;
-    }
-
-    public void setName(String name) {  //метод присвоения названия процессора
-        this.name = name;
     }
 
     public void setRate(int rate) {  //частоты

@@ -2,7 +2,20 @@ package com.company;
 
 import java.util.*;
 
-public class Ram {
+class Device {
+    protected String name;  //название устройства
+
+    protected int rate;  //частота
+
+    protected int memory;  //память
+
+    protected Device() {
+        System.out.println("Устройство создано");
+        }
+    public void Print() {}
+}
+
+public class Ram extends Device{
 
     String name;  //название оперативной памяти
     int rate; //частота
