@@ -4,9 +4,18 @@ using System.Text;
 
 namespace Programm
 {
-    class Ram
+    interface IPrint
     {
-        private string name;  //название оперативной памяти
+        void Print(string name, int rate, int memory)
+        {
+            Console.WriteLine("Название: " + name);
+            Console.WriteLine("Частота: " + rate);
+            Console.WriteLine("Объем памяти: " + memory);
+        }
+    };
+    class Device : IPrint
+    {
+        protected string name;  //название устройства
         public string Name
         {
             get
@@ -18,8 +27,8 @@ namespace Programm
                 if (value != null) name = value;
             }
         }
-        private int rate; //частота
-        public int Rate
+        protected int rate;  //частота
+        public int Rate  //частот
         {
             get
             {
@@ -30,8 +39,8 @@ namespace Programm
                 if (value > 0) rate = value;
             }
         }
-        private int memory;  //объем оперативной памяти
-        public int Memory
+        protected int memory;  //память
+        public int Memory  //объем оперативной памяти
         {
             get
             {
@@ -42,7 +51,19 @@ namespace Programm
                 if (value > 0) memory = value;
             }
         }
-
+        protected Device()
+        {
+            Console.WriteLine("Устройство создано");
+        }
+        public virtual void Print()
+        {
+            Console.WriteLine("Название устройства: " + name);
+            Console.WriteLine("Частота устройства: " + rate);
+            Console.WriteLine("Объем памяти устройства: " + memory);
+        }
+    }
+    class Ram : Device, IPrint
+    {
         public Ram() { }  //конструктор без параметров
         public Ram(string name)  //конструктор с одним параметром
         {
@@ -59,7 +80,7 @@ namespace Programm
             if (name == null) return 0;
             else return 1;
         }
-        public void Print() //вывод информации об оперативной памяти
+        public override void Print() //вывод информации об оперативной памяти
         {
             Console.WriteLine("Название оперативной памяти: " + name);
             Console.WriteLine("Частота оперативной памяти: " + rate);

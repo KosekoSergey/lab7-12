@@ -59,7 +59,7 @@ namespace Programm
 			vc.Input();
 			vc.Print();*/
 
-			Videocard[] vc = new Videocard[3];
+			/*Videocard[] vc = new Videocard[3];
 			for (int i = 0; i<3; i++)
             {
 				vc[i] = new Videocard("Видеокарта " + (i + 1), i + 1, i + 1);
@@ -73,7 +73,12 @@ namespace Programm
 					vc1[i, j] = new Videocard("Видеокарта " + (i * 2 + j + 1), i * i + j + 1, i * j + 1);
 					vc1[i,j].Print();
 				}
-			}
+			}*/
+
+			Ram ram = new Ram("Видеокарта-1", 3200, 64);
+			ram.Print();
+			Processor proc = new Processor("Процессор-1", 2400, 2);
+			Processor proc2 = (Processor)proc.Clone();
 		}
 	}
 }

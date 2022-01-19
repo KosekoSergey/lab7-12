@@ -4,9 +4,13 @@ using System.Text;
 
 namespace Programm
 {
-    class Processor
+    public interface ICloneable
     {
-        private string name;  //название процессора
+        object Clone();        
+    }
+    abstract class Pdevice
+    {
+        protected string name;  
         public string Name
         {
             get
@@ -17,6 +21,13 @@ namespace Programm
             {
                 if (value != null) name = value;
             }
+        }
+    }
+    class Processor : Pdevice, ICloneable
+    {
+        public object Clone()
+        {
+            return new Processor(Name, Rate, Bitness);
         }
         private int rate; //частота
         public int Rate
