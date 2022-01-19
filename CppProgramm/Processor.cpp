@@ -27,16 +27,16 @@ string Processor::get_name() {  //ф-ция получения названия
 	return name;
 }
 
+void Processor::set_name(string aname) {  //ф-ция присвоения названия
+	name = aname;
+}
+
 int Processor::get_rate() {  //частоты
 	return rate;
 }
 
 int Processor::get_bitness() {  //разрядности
 	return bitness;
-}
-
-void Processor::set_name(string aname) {  //ф-ция присвоения названия
-	name = aname;
 }
 
 void Processor::set_rate(int arate) {  //частоты

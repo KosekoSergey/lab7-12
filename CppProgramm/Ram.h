@@ -5,7 +5,17 @@ using namespace std;
 
 #pragma once
 
-class Ram {
+class Device {
+protected:
+	string name;  //название устройства
+	int rate;  //частота
+	int memory;  //память
+	Device() {
+		cout << "Устройство создано" << endl;
+	}
+};
+
+class Ram : Device{
 private:
 	string name;  //название оперативной памяти
 	int memory = 0;  // кол-во оперативной памяти

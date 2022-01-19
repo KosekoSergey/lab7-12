@@ -57,7 +57,7 @@ int main() {
     vc.input();
     vc.print();*/
 
-    Videocard vc[3];
+    /*Videocard vc[3];
     for (int i = 0; i < 3; i++)
     {
         vc[i] = *new Videocard("Видеокарта " + to_string(i + 1), i + 1, i + 1);
@@ -71,5 +71,8 @@ int main() {
             vc1[i][j] = *new Videocard("Видеокарта " + to_string(i * 2 + j + 1), i * i + j + 1, i * j + 1);
             vc1[i][j].print();
         }
-    }
+    }*/
+
+    Ram ram("Оперативная память-1", 1600, 8);
+    ram.print();
 }
